@@ -1,0 +1,79 @@
+﻿<Window x:Class="ToDo.AddTask"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:ToDo"
+        mc:Ignorable="d"
+        Title="AddTask" Height="350" Width="850" WindowStyle="None" AllowsTransparency="True">
+    <StackPanel>
+        <StackPanel>
+            <Grid Height="40" Background="#FF58206F">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition>
+                        
+                    </ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Add your task" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10" FontSize="16" Width="100"></TextBlock>
+                <Button x:Name="CloaseWindow" Width="50" BorderBrush="Transparent" Background="Transparent" HorizontalAlignment="Right" Click="Button_Click_1">
+                    <materialDesign:PackIcon Kind="Close" HorizontalAlignment="Center" VerticalAlignment="Center"></materialDesign:PackIcon>
+                </Button>
+            </Grid>
+        </StackPanel>
+
+        <StackPanel>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="20"></ColumnDefinition>
+                    <ColumnDefinition Width="140"></ColumnDefinition>
+                    <ColumnDefinition Width="140"></ColumnDefinition>
+                    <ColumnDefinition Width="140"></ColumnDefinition>
+                    <ColumnDefinition Width="240"></ColumnDefinition>
+                    <ColumnDefinition Width="80"></ColumnDefinition>
+                    <ColumnDefinition Width="80"></ColumnDefinition>
+                    <ColumnDefinition Width="20"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"></RowDefinition>
+                    <RowDefinition Height="200"></RowDefinition>
+                </Grid.RowDefinitions>
+                
+                <TextBlock Text="Started from" Grid.Column="1" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14"></TextBlock>
+                <TextBlock Text="Endet On" Grid.Column="2" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14"></TextBlock>
+                <TextBlock Text="Task header" Grid.Column="3" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14"></TextBlock>
+                <TextBlock Text="Task" Grid.Column="4" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14"></TextBlock>
+                <TextBlock Text="Weather" Grid.Column="5" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14"></TextBlock>
+                <TextBlock Text="Done" Grid.Column="6" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14"></TextBlock>
+
+                <DatePicker x:Name="StartTask" IsEnabled="False" Grid.Column="1" Grid.Row="1" VerticalAlignment="Top" Margin="5 0"></DatePicker>
+                <DatePicker x:Name="EndetTask" IsEnabled="True" Grid.Column="2" Grid.Row="1" VerticalAlignment="Top" Margin="5 0"></DatePicker>
+
+                <TextBox x:Name="HeaderTask" Grid.Column="3" Grid.Row="1" VerticalAlignment="Top" Margin="5 0"></TextBox>
+                <RichTextBox x:Name="TextTask" Grid.Column="4" Grid.Row="1" VerticalContentAlignment="Top" Margin="5"></RichTextBox>
+
+                <CheckBox x:Name="IncludeWeather" Grid.Column="5" Grid.Row="1" HorizontalAlignment="Center"></CheckBox>
+                <CheckBox x:Name="Done" Grid.Column="6" Grid.Row="1" HorizontalAlignment="Center"></CheckBox>
+                
+            </Grid>
+        </StackPanel>
+
+        <StackPanel>
+            <Grid Height="50">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="100"></ColumnDefinition>
+                    <ColumnDefinition Width="130"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="1" Margin="5 0" Content="Ok" Click="Button_Click">
+
+                </Button>
+                <Button Grid.Column="2" Margin="5 0" Content="Cancel" Click="Button_Click_1">
+                    
+                </Button>
+            </Grid>
+            
+        </StackPanel>
+        
+    </StackPanel>
+</Window>
