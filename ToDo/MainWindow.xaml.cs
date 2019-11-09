@@ -26,7 +26,7 @@ namespace ToDo
     {
         private readonly string PATH_TO_USERS = $"{AppDomain.CurrentDomain.BaseDirectory}//person.json";
         private readonly string PATH_TO_TASKS = $"{AppDomain.CurrentDomain.BaseDirectory}//todos.json";
-        private readonly string PATH_TO_THE_CITYS = $"..\..\..\newCitys.list.json";
+        private readonly string PATH_TO_THE_CITYS = @"..\..\..\newCitys.list.json";
 
         private WeatherSettings Settings;
         private DataLayer.Models.Task Task;
