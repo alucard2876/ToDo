@@ -23,12 +23,10 @@ namespace BuisnessLayer
         }
         public static void Serialize<T>(T obj, string path) where T : class
         {
-            if (File.Exists(path))
+            var stream = new FileStream(path, FileMode.OpenOrCreate);
+            using (var sw = new StreamWriter(stream))
             {
-                using (var sw = new StreamWriter(path))
-                {
-                    sw.WriteAsync(JsonConvert.SerializeObject(obj));
-                }
+                sw.WriteAsync(JsonConvert.SerializeObject(obj));
             }
         }
     }
